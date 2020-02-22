@@ -4,46 +4,30 @@
   <meta charset="UTF-8">
   <title>Natalia Matveeva</title>
   <style>
-.container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-
-  //border: 2px solid var(--gs0);
-  //border-radius: 8px;
-  height: 100%;
+    body {
+  margin: 0;
+  scroll-snap-type: y mandatory; 
+      overflow-y: scroll;
 }
 
-.container div {
+section {
+  height: 100vh;
   scroll-snap-align: start;
+}
 
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 4rem;
+section:nth-of-type(even) {
+  background: #e3e6e4
 }
-.container div:nth-child(1) {
-  background: hotpink;
-  color: white;
-}
-.container div:nth-child(2) {
-  background: azure;
-}
-.container div:nth-child(3) {
-  background: blanchedalmond;
-}
-.container div:nth-child(4) {
-  background: lightcoral;
-  color: white;
+
+section:nth-of-type(odd) {
+  background: #fcfcfc
 }
 </style>
 </head>
 <body>
-<div class="container">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-</div>
+  <section></section>
+  <section></section>
+  <section></section>
+  <section></section>
 </body>
 </html>
