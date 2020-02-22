@@ -3,82 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <title>Natalia Matveeva</title>
-  <script>
-const gra = function(min, max) {
-    return Math.random() * (max - min) + min;
-};
-const init = function() {
-    let items = document.querySelectorAll("li");
-    for (let i = 0; i < items.length; i++) {
-        items[i].style.minHeight = gra(120, 205) + "vh";
-        items[i].style.background = randomColor({ luminosity: "light" });
-    }
-
-    cssScrollSnapPolyfill();
-};
-init();
-</script>
   <style>
-* {
-    box-sizing: border-box;
-}
-body {
-    font-family: sans-serif;
-}
-
-.wrapper {
-    display: flex;
-}
-
-
 .container {
-    flex-basis: 100%;
-    max-height: 100vh;
-    overflow-y: scroll;
-    border: 1px solid gray;
-    scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+
+  //border: 2px solid var(--gs0);
+  //border-radius: 8px;
+  height: 100%;
 }
 
-li {
-    border-bottom: 1px solid white;
-    padding: 3rem;
-    font-size: 1.4rem;
-    color: rgba(white, .5);
-    background: lightgray;
-    text-align: center;
-    scroll-snap-align: start;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
+.container div {
+  scroll-snap-align: start;
+
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}
+.container div:nth-child(1) {
+  background: hotpink;
+  color: white;
+}
+.container div:nth-child(2) {
+  background: azure;
+}
+.container div:nth-child(3) {
+  background: blanchedalmond;
+}
+.container div:nth-child(4) {
+  background: lightcoral;
+  color: white;
 }
 </style>
 </head>
 <body>
-<div class="wrapper">
 <div class="container">
-    <ul>
-        <li>Lorem, ipsum dolor.</li>
-        <li>Doloremque, maxime id.</li>
-        <li>Mollitia, qui beatae?</li>
-        <li>Sit, fuga repellendus!</li>
-        <li>Reiciendis, commodi asperiores?</li>
-        <li>Dicta, deleniti tempore?</li>
-        <li>Recusandae, rerum numquam.</li>
-        <li>Cumque, quos eveniet?</li>
-        <li>Accusamus, libero in.</li>
-        <li>Reprehenderit, minus debitis.</li>
-        <li>Minima, dolores nobis?</li>
-        <li>Iure, consequatur illum!</li>
-        <li>Atque, nostrum libero!</li>
-        <li>Minima, porro veritatis?</li>
-        <li>Explicabo, non itaque.</li>
-        <li>Quidem, mollitia porro.</li>
-        <li>Maiores, recusandae voluptatem.</li>
-        <li>Inventore, autem cupiditate?</li>
-        <li>Illum, reprehenderit quos.</li>
-        <li>Sapiente, obcaecati facilis.</li>
-    </ul>
-</div>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
 </div>
 </body>
 </html>
